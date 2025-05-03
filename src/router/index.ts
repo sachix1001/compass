@@ -7,7 +7,17 @@
 // Composables
 import { createRouter, createWebHistory } from 'vue-router/auto';
 import { setupLayouts } from 'virtual:generated-layouts';
-import { routes } from 'vue-router/auto-routes';
+
+const routes = [
+  {
+    path: '/',
+    redirect: '/teacher',
+  },
+  {
+    path: '/teacher',
+    component: () => import('@/pages/Teacher.vue'),
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

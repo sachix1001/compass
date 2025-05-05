@@ -1,31 +1,44 @@
 <template>
-  <v-app-bar app color="primary" flat height="64">
-    <template v-slot:prepend>
+  <v-app-bar
+    app
+    class="px-2 px-sm-4 px-md-6"
+    color="primary"
+    flat
+    height="56"
+  >
+    <template #prepend>
       <img
-        src="@/assets/logo-white.svg"
         alt="Qubena Logo"
-        class="logo me-2 ms-4"
+        class="logo d-none d-sm-flex"
         height="40"
-      />
-      <v-btn class="mx-4" variant="outlined" color="white" size="large">
+        src="@/assets/logo-white.svg"
+      >
+      <div
+        class="ml-2 ml-sm-4 ml-md-8 h-8 px-2 px-sm-4 font-bold content-center border !border-white rounded-md whitespace-nowrap text-sm sm:text-base"
+      >
         アカウント管理
-      </v-btn>
+      </div>
     </template>
 
     <v-spacer />
 
-    <v-btn>
-      <div class="d-flex align-center user-info">
-        <font-awesome-icon
-          :icon="['fas', 'circle-user']"
-          class="me-2"
-          size="2x"
+    <!-- TODO route to user profile -->
+    <div class="d-flex align-center">
+      <a class="font-bold gap-x-2 flex items-center text-sm sm:text-base">
+        <v-icon
+          class="d-none d-sm-flex"
+          icon="mdi-account-circle"
+          size="large"
         />
-        <span class="user-name">因幡深雪</span>
-      </div>
-    </v-btn>
+        <span class="d-none d-sm-flex">因幡深雪</span>
+        <v-icon
+          class="d-flex d-sm-none"
+          icon="mdi-account-circle"
+          size="small"
+        />
+      </a>
+    </div>
   </v-app-bar>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>

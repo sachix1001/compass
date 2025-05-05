@@ -78,6 +78,7 @@ export default defineConfig({
     port: 3000,
   },
   css: {
+    postcss: './postcss.config.cjs',
     preprocessorOptions: {
       sass: {
         api: 'modern-compiler',

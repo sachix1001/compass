@@ -1,7 +1,7 @@
 <template>
   <v-app-bar
     app
-    class="px-2 px-sm-4 px-md-6"
+    class="px-sm-4 px-md-6 px-2"
     color="primary"
     flat
     height="56"
@@ -14,7 +14,7 @@
         src="@/assets/logo-white.svg"
       >
       <div
-        class="ml-2 ml-sm-4 ml-md-8 h-8 px-2 px-sm-4 font-bold content-center border !border-white rounded-md whitespace-nowrap text-sm sm:text-base"
+        class="ml-sm-4 ml-md-8 px-sm-4 ml-2 h-8 content-center whitespace-nowrap rounded-md border !border-white px-2 text-sm font-bold sm:text-base"
       >
         アカウント管理
       </div>
@@ -24,7 +24,7 @@
 
     <!-- TODO route to user profile -->
     <div class="d-flex align-center">
-      <a class="font-bold gap-x-2 flex items-center text-sm sm:text-base">
+      <a class="flex items-center gap-x-2 text-sm font-bold sm:text-base">
         <v-icon
           class="d-none d-sm-flex"
           icon="mdi-account-circle"

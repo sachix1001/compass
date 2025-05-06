@@ -97,9 +97,16 @@ src/
    - Business logic could be more centralized
 
 3. **Navigation**
+
    - Account button functionality not implemented
    - Hardcoded user name in navbar
    - Home page redirection needs proper implementation
+
+4. **Design System & Styling**
+   - Design tokens need to be properly implemented for consistent theming
+   - Current use of Tailwind's `!important` to override Vuetify styles is not ideal
+   - Need to establish better styling hierarchy between Vuetify and Tailwind
+   - Consider implementing a proper design token system for colors, spacing, and typography
 
 ### Future Enhancements
 
@@ -111,16 +118,20 @@ src/
 
 2. **Code Organization**
 
-   - Further component decomposition
-   - Centralize business logic
+   - Further component decomposition (if current components get more complex)
    - Implement proper routing
 
 3. **Features**
+
    - Add user authentication
    - Implement account management
    - Add proper home page
 
-
+4. **Design System**
+   - Implement a proper design token system
+   - Create a more maintainable styling approach between Vuetify and Tailwind
+   - Establish clear styling hierarchy and override patterns
+   - Document design decisions and styling guidelines
 
 ## 📝 Notes
 

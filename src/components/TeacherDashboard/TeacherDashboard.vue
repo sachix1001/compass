@@ -8,7 +8,7 @@
             prepend-icon="mdi-check"
           >
             <v-icon icon="fa:fas fa-chalkboard-teacher" />
-            <span class="text-h5 ms-4 font-weight-bold">先生</span>
+            <span class="text-h5 font-weight-bold ms-4">先生</span>
 
             <v-spacer />
 
@@ -28,17 +28,14 @@
 
           <v-data-table
             v-model:page="page"
-            class="mt-4 rounded-0"
+            class="rounded-0 mt-4"
             :headers="headers"
             :items="facilitators"
             :items-per-page="20"
             :loading="isLoading"
             :row-props="
               (data) => ({
-                class: [
-                  'border',
-                  data.index % 2 === 0 ? 'bg-white' : 'bg-gray-100',
-                ],
+                class: ['border', data.index % 2 === 1 && 'bg-gray-100'],
               })
             "
             :search="search"
@@ -46,7 +43,7 @@
             sort-desc-icon="mdi-chevron-down"
           >
             <template #no-data>
-              <div class="text-center py-4">該当するデータはありません</div>
+              <div class="py-4 text-center">該当するデータはありません</div>
             </template>
 
             <template #bottom>
@@ -81,11 +78,7 @@
       class="align-center justify-center"
       persistent
     >
-      <v-progress-circular
-        color="primary"
-        indeterminate
-        size="64"
-      />
+      <v-progress-circular color="primary" indeterminate size="64" />
     </v-overlay>
 
     <ErrorDialog v-model="showError" @retry="refetch" />

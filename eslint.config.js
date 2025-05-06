@@ -1,5 +1,6 @@
 import vuetifyConfig from 'eslint-config-vuetify/index.ts.mjs';
 import ignoreConfig from 'eslint-config-flat-gitignore';
+import globals from 'globals';
 // import vitestPlugin from '@vitest/eslint-plugin'
 
 export default [
@@ -29,6 +30,16 @@ export default [
     languageOptions: {
       globals: {
         //   ...vitestPlugin.environments.env.globals,
+      },
+    },
+  },
+  {
+    files: ['**/*.cjs'],
+    languageOptions: {
+      sourceType: 'commonjs',
+      globals: {
+        ...globals.node,
+        ...globals.amd,
       },
     },
   },

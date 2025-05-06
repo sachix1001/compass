@@ -2,6 +2,8 @@
 
 A Vue.js-based teacher management system that displays a list of teachers with search, sort, and pagination capabilities.
 
+![compass-app](https://github.com/user-attachments/assets/9b1e8dc3-6e55-48ce-bf0d-659711e82b67)
+
 ## 🚀 Quick Start
 
 ```bash

@@ -7,7 +7,7 @@
             class="d-flex align-center pe-2"
             prepend-icon="mdi-check"
           >
-            <v-icon icon="fa:fas fa-chalkboard-teacher" />
+            <v-icon icon="fa:fas fa-chalkboard-teacher" size="26" />
             <span class="text-h5 font-weight-bold ms-4">先生</span>
 
             <v-spacer />
@@ -28,6 +28,7 @@
 
           <v-data-table
             v-model:page="page"
+            :cell-props="{ class: 'text-xs !h-12' }"
             class="rounded-0 mt-4"
             :headers="headers"
             :items="facilitators"

@@ -39,7 +39,7 @@
                 class: ['border', data.index % 2 === 1 && 'bg-gray-100'],
               })
             "
-            :search="search"
+            :search="debouncedSearch"
             sort-asc-icon="mdi-chevron-up"
             sort-desc-icon="mdi-chevron-down"
           >
@@ -87,12 +87,22 @@
 </template>
 
 <script setup lang="ts">
-  import { computed, ref } from 'vue';
+  import { computed, ref, watch } from 'vue';
   import { useFacilitators } from '@/composables/useFacilitators';
   import ErrorDialog from '@/components/ErrorDialog.vue';
+  import { useDebounceFn } from '@vueuse/core';
 
   const search = ref('');
+  const debouncedSearch = ref('');
   const page = ref(1);
+
+  const debouncedUpdateSearch = useDebounceFn((value: string) => {
+    debouncedSearch.value = value;
+  }, 300);
+
+  watch(search, newValue => {
+    debouncedUpdateSearch(newValue);
+  });
 
   const headers = [
     {

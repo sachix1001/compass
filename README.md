@@ -85,8 +85,6 @@ src/
 
 ## 🎯 Areas for Improvement
 
-### Current Limitations
-
 1. **Accessibility**
 
    - ARIA labels need to be added
@@ -109,6 +107,8 @@ src/
    - Current use of Tailwind's `!important` to override Vuetify styles is not ideal
    - Need to establish better styling hierarchy between Vuetify and Tailwind
    - Consider implementing a proper design token system for colors, spacing, and typography
+   - "No results" message styling needs to match design specifications
+   - Pagination component styling differs from design requirements
 
 ### Future Enhancements
 
